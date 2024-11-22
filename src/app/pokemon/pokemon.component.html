@@ -1,0 +1,30 @@
+<p>pokemon works!</p>
+<!-- <div class="container">
+    <h2>Card Image</h2>
+    <p>Image at the top (card-img-top):</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    <br>
+ -->
+
+<div class="maincontainer">
+    <div class="container" *ngFor="let pokemon of pokemons">
+        <div class="image">
+        <img src="{{pokemon.image_url}}" alt="" height="80%" width="80%">
+        </div>
+        <div class="body">
+        <h3>{{pokemon.pokemon}}</h3>
+        <h5>Type:{{pokemon.type}}</h5>
+        <h5>Abilities:{{pokemon.abilities}}</h5>
+        <h5>Hitpoints:{{pokemon.hitpoints}}</h5>
+        <h5>Evolutions:{{pokemon.evolutions}}</h5>
+        <h5>Location:{{pokemon.location}}</h5>
+        </div>
+    </div>
+</div>

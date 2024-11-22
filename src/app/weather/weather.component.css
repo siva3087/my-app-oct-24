@@ -1,0 +1,30 @@
+.maincontainer{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 50%;
+    width: 50%;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dot{
+    height: 10%;
+    width: 10%;
+    background-color: yellow;
+    border-radius: 50%;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color:green;
+}

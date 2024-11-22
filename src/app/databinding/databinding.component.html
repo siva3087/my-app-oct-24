@@ -1,0 +1,42 @@
+<h1>Welcome to Data Binding</h1>
+<!-- Interppolation -->
+<h1>My age is {{age}}</h1>
+<h1>My name is {{name}}</h1>
+<h1> is Indian {{isIndian}}</h1>
+
+<!-- Property Bindiing -->
+ <button [disabled] = 'isInvalid'>submit</button>
+
+ <!-- Event Binding -->
+
+ <button (click)="create()">Create</button>
+
+ <input type="text" (keyup)="typing()">
+
+ <!-- Two Way Data Binding -->
+
+ <input type="text" [(ngModel)] = 'phone'>
+
+ <!-- ===================== -->
+  <h1>calculator</h1>
+
+  <label for="">Num1</label>
+  <input type="number" [(ngModel)]="num1">
+  <br>
+  <label for="">Num2</label>
+  <input type="number" [(ngModel)]="num2">
+  <br>
+  <button (click)="sum()">Sum</button>
+  <h1>{{result}}</h1>
+  <!-- disabled -->
+
+  <h1>calculator</h1>
+
+  <label for="">Num1</label>
+  <input type="number" [(ngModel)]="num1">
+  <br>
+  <label for="">Num2</label>
+  <input type="number" [(ngModel)]="num2">
+  <br>
+  <button [disabled] = "!num1 || !num2" (click)="sum()">Sum</button>
+  <h1>{{result}}</h1>

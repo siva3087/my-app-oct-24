@@ -1,0 +1,23 @@
+<div class="calculator">
+    <h1>calculator</h1>
+    <br>
+    <div class="calitems1">
+        <label for="" >num1:</label>
+        <input type="number" [(ngModel)]="num1">
+    </div>
+    <div class="calitems2">
+        <label for="">num2:</label>
+        <input type="number" [(ngModel)]="num2">
+    </div>
+    <br>
+    <div class="calbut">
+        <button [disabled] = '!num1 || !num2' class="calbutton" (click) = 'Sum()'>Sum</button>
+        <button class="calbutton" (click)=" Sub()">Sub</button>
+        <button class="calbutton " (click) ='Mul()'>Mul</button>
+        <button class="calbutton " (click) = 'Div()'>Div</button>
+    </div>
+    <div class="result">
+    <label for="">Result:</label>
+    <label for="" id="result">{{result}}</label>
+    </div>
+</div>

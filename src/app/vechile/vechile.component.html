@@ -1,0 +1,62 @@
+<p>vechile works!</p>
+<input type="text" placeholder="search" [(ngModel)]="term"  (keyup)="filter()">
+<select [(ngModel)] ="column">
+    <option >Vehicle</option>
+    <option >Manufacturer</option>
+    <option >Model</option>
+    <option >type</option>
+    <option >Fuel</option>
+    <option >Color</option>
+    <option >Cost</option>
+    <option >id</option>
+    <option >Actions</option>
+</select>
+<select [(ngModel)]= "order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sort()">sort</button>
+<!-- pagination -->
+ <select [(ngModel)]="limit">
+    <option >10</option>
+    <option >20</option>
+    <option >30</option>
+ </select>
+ <select [(ngModel)]="page">
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+ </select>
+ <button (click)="pagination()">Pagination</button>
+<table border="1" class="table table-dark">
+    <thead>
+        <th>S.No</th>
+        <th>Vechile</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Fuel</th>
+        <th>Color</th>
+        <th>Image</th>
+        <th>Cost</th>
+        <th>id</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles , let i = index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>
+                <img src = "{{vehicle.image}}" alt="" width="100px"></td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.id}}</td>
+            <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
+
+        </tr>
+    </tbody>
+</table>
+

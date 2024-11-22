@@ -1,0 +1,9 @@
+<div class="mainconatiner">
+    <div class="container" *ngFor="let product of products ">
+        <img class="image" src="{{product.image}}" alt="" width="200px">
+        <h3 >{{product.category}}</h3>
+        <label for="" class="rating"><h6>{{product.rating.rate}}</h6></label>
+       <label for="" class="title"> <h6 >{{product.title}}</h6></label>
+       <label class="price"> <h6> Rs.{{product.price}}</h6></label>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="Rectangle">
+    <h1>Rectangle</h1>
+    <div class="height">
+        <label for="">Height:</label>
+        <input type="number" [(ngModel)]="height">
+    </div>
+    <div class="width">
+        <label for="">Width:</label>
+        <input type="number" [(ngModel)]="width">
+    </div>
+    <div class="button">
+        <button [disabled]="!height || !width" class="calculate" (click)=" Area()">Area</button>
+        <button [disabled]="!height || !width" class="calculate" (click)="Perimeter()">Perimeter</button>
+    </div>
+    <div>
+        <label for="">Result is: </label>
+        <label for="" id="result">{{result}}</label>
+    </div>
+</div>
+

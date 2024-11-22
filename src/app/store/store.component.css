@@ -1,0 +1,38 @@
+.actions{
+    height: 40%;
+    width: 100%;
+    background-color: aliceblue;
+    margin-top: 0;
+    display: flex;
+}
+h1{
+    text-align: center;
+    background-color: aqua;
+}
+.right{
+    height: 100%;
+    width: 30%;
+    background-color: darkcyan;
+}
+.left{
+    background-color: darkcyan;
+    height: 100%;
+    width: 70%;
+}
+.table{
+    height: 60%;
+    width: 100%;
+    background-color: aqua;
+    margin-top: 0;
+}
+.cost{
+    margin-left: 20px;
+    background-color: yellow;
+    text-transform: capitalize;
+}
+.add{
+    background-color: green;
+}
+.gap{
+    margin-left: 20px;
+}

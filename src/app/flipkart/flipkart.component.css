@@ -1,0 +1,41 @@
+.mainconatiner{
+    height: 100%;
+    width: 100%;
+    background-color:red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    height: 50%;
+    width: 24%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.container:hover{
+    
+}
+
+.image{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    color: blue;
+}
+.price{
+    color: red;
+}
+.rating{
+    background-color: gray;
+    width: 25px;
+    height: 20px;
+    color: black;
+    position: relative;
+    top: -55px;
+
+}

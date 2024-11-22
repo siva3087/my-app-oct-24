@@ -1,0 +1,16 @@
+<p>movie works!</p>
+<div class="maincontainer">
+    <div class="conatiner" *ngFor="let movie of movies">
+
+        <h3>{{movie.movie}}</h3>
+        <span style="color: aliceblue;">Rating: {{movie.rating}}</span>
+        <span *ngFor="let item of [].constructor(getRating(movie.rating)); let i = index">
+            <img
+              src="https://img.freepik.com/free-vector/basic-star-flat-vector_78370-1483.jpg?t=st=1731987078~exp=1731990678~hmac=00eea7759f74d860c95f71b18a680f5de0693bd0b18476ebdeb1cf0ccc1ea2a1&w=740"
+              width="30px"
+            />
+          </span>
+          <br /><br />
+        <a href="" class="btn btn-outline-warning">View on IMDb</a>
+    </div>
+</div>

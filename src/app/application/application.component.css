@@ -1,0 +1,17 @@
+.maincontainer{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    padding: 10px;
+
+}
+.blog{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    word-spacing: normal;
+}
+h3{
+    font-size: 30px;
+}

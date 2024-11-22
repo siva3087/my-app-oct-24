@@ -1,0 +1,14 @@
+<div class="maincontainer">
+    <div class="container" *ngFor="let weather of weathers ">
+        <h1>Weather in Hyderabad</h1>
+        <div [ngClass] ="{'blue':weather.current_weather.temperature<0,
+                           'green':(weather.current_weather.temperature>0 && weather.current_weather.temperature<=30)  }"  class="dot">
+
+        </div>
+        <h1>{{weather.current_weather.temperature}}{{weather.current_weather_units.temperature}}</h1>
+        <h6> Wind Speed:{{weather.current_weather.windspeed}}{{weather.current_weather_units.windspeed}}</h6>
+        <h6> Wind Direction:{{weather.current_weather.winddirection}}{{weather.current_weather_units.winddirection}}</h6>
+        <h6>{{weather.current_weather.time | date:"dd/mm/yyyy"}}</h6>
+    </div>
+
+</div>

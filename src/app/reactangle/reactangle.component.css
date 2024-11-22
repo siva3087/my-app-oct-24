@@ -1,0 +1,33 @@
+.Rectangle{
+    height: 50%;
+    width: 40%;
+    background-color: lightcyan;
+    display: flex;
+    margin: auto;
+    margin-top: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 20px;  
+    border: 5px solid orange;
+}
+.height{
+    display: flex;
+    margin-bottom: 20px;
+}
+.width{
+    display: flex;
+    margin-bottom: 20px;
+}
+.calculate{
+    background-color: lightseagreen;
+    color: black;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.calculate:hover{
+    background-color: lightgreen;
+}
+

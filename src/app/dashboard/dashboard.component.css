@@ -1,0 +1,46 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: teal;
+    overflow: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.head{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 40px;
+}
+hr{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.dashboard-items{
+    margin-left: 4%;
+    margin-top: 0px;
+    cursor: pointer;
+}
+.Logout{
+    background-color: yellow;
+    color: balck;
+    text-transform: capitalize;
+    width: 50%;
+    height: 4%;
+    margin-left: 5%;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px;
+}

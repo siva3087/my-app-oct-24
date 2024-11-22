@@ -1,0 +1,34 @@
+<p>student works!</p>
+<div class="master">
+    <div class="maincontainer" *ngFor="let student of students">
+        <div class="card">
+            <div class="top">
+                <img  class="head"src="{{student.school_logo}}" alt="" height="80%" width="40%">
+                <h4>{{student.school_name}}</h4>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <h5>Name:{{student.name}}</h5>
+                    <h5>Phone:{{student.phone}}</h5>
+                    <h5>DoB:{{student.dob}}</h5>
+                    <h5>City:{{student.city}}</h5>
+                    <h5>Email:{{student.email}}</h5>
+                </div>
+                <div class="right">
+                    <img  class="pawan"src="{{student.profile_picture}}" alt="" height="100%" width="100%">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="btop">
+                    <h5 class="sub">School City:{{student.school_city}}</h5>
+                    <h5 class="sub"> School Pin:{{student.school_pin}}</h5>
+                </div>
+                <div class="bdown">
+                    <button class="btn btn-warning view">View</button>
+                    <button class="btn btn-primary edit">Edit</button>
+                    <button class="btn btn-danger delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

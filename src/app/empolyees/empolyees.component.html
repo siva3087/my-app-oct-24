@@ -1,0 +1,36 @@
+<h1>Employee Registartion</h1>
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="empname">
+<br>
+<br>
+<label for="">Role:</label>
+<input type="text" [(ngModel)]="role">
+<br>
+<br>
+<button (click)="add()">Submit</button>
+<br>
+<br>
+<h1>Employee Details</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+<tr *ngFor ='let employee of employees;let i =index'>
+    <td>{{i+1}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.role}}</td>
+</tr>
+    </tbody>
+</table>
+
+<!-- IF Loop -->
+
+<h1 *ngIf="false">Hello</h1>
+<h1 *ngIf="true">Welcome</h1>
+
+
