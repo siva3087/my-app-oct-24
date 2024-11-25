@@ -1,21 +1,47 @@
-<p>student works!</p>
-<div class="master">
+<h1>Students</h1>
+<!-- Search BAR -->
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+<!-- Column Select -->
+<select [(ngModel)] = "column" >
+    <option >name</option>
+    <option >phone</option>
+    <option >city</option>
+    <option >dob</option>
+    <option >email</option>
+</select>
+<!-- Ascending & Desending -->
+ <select [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+ </select>
+ <button (click)="sort()">Sort</button>
+<div class="master">  
     <div class="maincontainer" *ngFor="let student of students">
         <div class="card">
             <div class="top">
-                <img  class="head"src="{{student.school_logo}}" alt="" height="80%" width="40%">
+                <img  class="head"src="{{student.school_logo}}" alt="" height="40%" width="40%">
                 <h4>{{student.school_name}}</h4>
             </div>
             <div class="middle">
                 <div class="left">
-                    <h5>Name:{{student.name}}</h5>
-                    <h5>Phone:{{student.phone}}</h5>
-                    <h5>DoB:{{student.dob}}</h5>
-                    <h5>City:{{student.city}}</h5>
-                    <h5>Email:{{student.email}}</h5>
+                    <label for="">Name:</label>
+                    <label for="">{{student.name}}</label>
+                    <br>
+                    <label for="">Phone:</label>
+                    <label for="">{{student.phone}}</label>
+                    <br>
+                    <label for="">City:</label>
+                    <label for="">{{student.city}}</label>
+                    <br>
+                    <label for="">DoB:</label>
+                    <label for="">{{student.dob}}</label>
+                    <br>
+                    <label for="">Email:</label>
+                    <label for="">{{student.email}}</label>
+                    <br>
                 </div>
                 <div class="right">
-                    <img  class="pawan"src="{{student.profile_picture}}" alt="" height="100%" width="100%">
+                    <img  class="pawan"src="{{student.profile_picture}}" alt="" height="50px" width="50px">
                 </div>
             </div>
             <div class="bottom">

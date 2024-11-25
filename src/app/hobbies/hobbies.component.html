@@ -1,0 +1,21 @@
+<h1 class="heading">Social profiles</h1>
+<div class="main">
+    <div class="cards" *ngFor="let hobbie of hobbies">
+        <img  class="profile"src="{{hobbie.profilePic}}" alt="">
+        <h1>{{hobbie.fullName}}</h1>
+        <h5>{{hobbie.username}}</h5>
+        <h5>{{hobbie.bio}}</h5>
+        <h5>Location:{{hobbie.location}}</h5>
+        <h5>Work:{{hobbie.work}}</h5>
+        <h5>Hobbies:{{hobbie.hobbies}}</h5>
+        <h5>Intersets:{{hobbie.interests}}</h5>
+        <div class="Followers">
+            <button class="button">Followers:{{hobbie.followersCount}}</button>
+        </div>
+        <div class="posts">
+            <button class="button">Following:{{hobbie.followingCount}}</button>
+            <button class="button">Posts:{{hobbie.postsCount}}</button>
+
+        </div>
+    </div>
+</div>
