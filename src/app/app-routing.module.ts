@@ -27,6 +27,7 @@ import { MovieComponent } from './movie/movie.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -42,6 +43,7 @@ const routes: Routes = [
     {path:'flipkart', component:FlipkartComponent},
     {path:'weather',component:WeatherComponent},
     {path:'store', component:StoreComponent},
+    {path:'hobbies', component:HobbiesComponent},
     {path:'student', component:StudentComponent},
     {path:'photos', component:PhotosComponent},
     {path:'movie', component:MovieComponent},

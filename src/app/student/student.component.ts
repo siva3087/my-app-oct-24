@@ -9,15 +9,46 @@ import { Subscriber } from 'rxjs';
 })
 export class StudentComponent {
 
-  students:any =[];
-  constructor(private _studentService:StudetService){
-  _studentService.getstudents().subscribe(
-    (data:any) =>{
-      this.students =data;
-    },
-    (err:any) =>{
-      alert("internal server erroe")
-    }
-  )
+  students: any = [];
+  term: string = "";
+  column: string = "";
+  order:string ="";
+  constructor(private _studentService: StudetService) {
+    _studentService.getstudents().subscribe(
+      (data: any) => {
+        this.students = data;
+      },
+      (err: any) => {
+        alert("internal server error")
+      }
+    )
   }
+  filter(){
+  this._studentService.getFilteredStudents(this.term).subscribe(
+      (data: any) => {
+        this.students = data;
+      },
+      (err: any) => {
+        alert("internal server error")
+      }
+    )
+  }
+  sort(){
+    this._studentService.getSortedStudents(this.column,this.order).subscribe(
+        (data: any) => {
+          this.students = data;
+        },
+        (err: any) => {
+          alert("internal server error")
+        }
+      )
+    }
+  
+
 }
+
+
+
+
+
+
