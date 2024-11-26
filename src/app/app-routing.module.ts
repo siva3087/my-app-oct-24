@@ -28,6 +28,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { CreateuserComponent } from './createuser/createuser.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path:'application', component:ApplicationComponent},
     {path:'circle', component:CircleComponent},
     {path:'bmi', component:BMIComponent},
+    {path:'createuser', component:CreateuserComponent},
     {path:'logout', component:LogoutComponent}
 
   ]},
