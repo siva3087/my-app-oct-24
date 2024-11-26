@@ -33,6 +33,8 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateuserComponent } from './createuser/createuser.component';
 
 @NgModule({
   declarations: [
@@ -64,14 +66,16 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     PokemonComponent,
     CreatevehicleComponent,
     StudentComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    CreateuserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
