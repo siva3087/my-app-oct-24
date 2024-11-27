@@ -35,6 +35,7 @@ import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateuserComponent } from './createuser/createuser.component';
+import { MarksComponent } from './marks/marks.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { CreateuserComponent } from './createuser/createuser.component';
     CreatevehicleComponent,
     StudentComponent,
     HobbiesComponent,
-    CreateuserComponent
+    CreateuserComponent,
+    MarksComponent
   ],
   imports: [
     BrowserModule,
