@@ -1,8 +1,12 @@
 <div class="maincontainer">
     <div class="blog" *ngFor="let application of applications">
         <h3>{{application.title}}</h3>
-        <h5>{{application.author}}|{{application.date_published}}</h5>
-        <h6>{{application.content}}</h6>
+        <!-- <h5>{{application.author}}|{{application.date_published}}</h5> -->
+         <h5><span style="font-size: 20px;">{{application.author}}</span>
+         <span style="color: gray; font-size: 20px;">|{{application.date_published}}</span>
+        
+        </h5>
+        <h6 style="font-size: 15px;">{{application.content}}</h6>
  
     </div>
 </div>

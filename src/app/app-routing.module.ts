@@ -30,6 +30,7 @@ import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { MarksComponent } from './marks/marks.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -59,6 +60,7 @@ const routes: Routes = [
     {path:'circle', component:CircleComponent},
     {path:'bmi', component:BMIComponent},
     {path:'createuser', component:CreateuserComponent},
+    {path:'marks', component:MarksComponent},
     {path:'logout', component:LogoutComponent}
 
   ]},

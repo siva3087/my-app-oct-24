@@ -8,11 +8,13 @@ import { ApplicationService } from '../application.service';
 })
 export class ApplicationComponent {
   applications:any =[];
+  
 
   constructor(private _applicationService:ApplicationService){
     _applicationService.getApplicationsService().subscribe(
       (data:any) =>{
         this.applications = data;
+        console.log(this.applications)
       },
       (err:any) =>{
         alert("internal server error")
