@@ -29,7 +29,7 @@
         <h3 class="dashboard-items" routerLink="circle">Circle</h3>
         <h3 class="dashboard-items" routerLink="bmi">BMI</h3>
 
-        <button class="Logout">Logout</button>
+        <button (click)="logout()" class="Logout">Logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>
