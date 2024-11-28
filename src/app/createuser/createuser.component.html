@@ -3,7 +3,7 @@
     <label for="">Name:</label>
     <input type="text" formControlName="name">
     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
-        <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+     <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
         <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Min 3 Charecters</p>
         <p class="error" *ngIf="userForm.get('name')?.errors?.['maxlength']">Max 10 Charecters</p>
     </div>
@@ -19,19 +19,9 @@
     <br>
     <label for="">Email:</label>
     <input type="text" formControlName="email">
-    <div *ngIf="userForm.get('emil')?.touched && userForm.get('email')?.invalid">
-        <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">Email is required</p>
-        <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</p>     
-    </div>
-
     <br>
     <label for="">Phone:</label>
     <input type="text" formControlName="phone">
-    <div *ngIf="userForm.get('phone')?.touched && userForm.get('ph0ne')?.invalid">
-        <p class="error" *ngIf="userForm.get('phone')?.errors?.['required']">phone is required</p>
-        <p class="error" *ngIf="userForm.get('phone')?.errors?.['phone']">Invalid email format</p>     
-    </div>
-
     <br>
     <div formGroupName="address">
         <label for="">City:</label>
@@ -43,6 +33,7 @@
         <br>
 
     </div>
+    <div>
         <label for="">Type:</label>
         <input type="radio" name="type" formControlName="type" value="dayScholor">
         <label for="">DayScholor</label>
@@ -53,9 +44,6 @@
             <label for="">Bus Fee:</label>
             <input type="number" formControlName="busFee">
             <br>
-            <div *ngIf="userForm.get('address')?.get('city')?.touched && userForm.get('address')?.get('city')?.invalid">
-                <p class="error" *ngIf="userForm.get('address')?.get('city')?.errors?.['required']">City is required</p>
-            </div>
         </div>
         <div *ngIf="userForm.get('type')?.value == 'rseidential'">
             <label for="">Hostel Fee:</label>
@@ -67,33 +55,34 @@
         <button (click)="addCard()">Add Card</button>
         <br>
         <br>
-        <div formArrayName="cards">
-            <div *ngFor="let card of cardsFormArray.controls;let i=index">
-                <div formGroupName="{{i}}">
-                    <h2>card{{i+1}}</h2>
-                    <label for="">Nmuber:</label>
-                    <input type="number" formControlName="number">
-                    <div *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
-                        <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']">Number is required</p>
-                    </div>
-                    <br>
-                    <label for="">Expiry:</label>
-                    <input type="month" formControlName="expiry">
-                    <br>
-                    <label for="">CVV:</label>
-                    <input type="number" formControlName="cvv">
-                    <br>
 
-                    <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+    </div>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <h2>card{{i+1}}</h2>
+                <label for="">Nmuber:</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label for="">Expiry:</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label for="">CVV:</label>
+                <input type="number" formControlName="cvv">
+                <br>
 
-                    <hr>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
 
+                <hr>
 
 
-                </div>
+
             </div>
         </div>
-        
-        <button (click)="submit()" class="btn btn-warning">Submit</button>
-
+    </div>
+    <button (click)="submit()" class="btn btn-warning">Submit</button>
+    
 </form>
+<!-- <video src="https://www.youtube.com/watch?v=Uogp2DhYxeY", controls, height="500px" width="500px"></video> -->
+<!-- <iframe  controls width="500" height="500" src="https://www.youtube.com/embed/Uogp2DhYxeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <iframe height="500px" width="500px" src="https://www.youtube.com/watch?v=Uogp2DhYxeY"   frameborder="0"></iframe> -->
