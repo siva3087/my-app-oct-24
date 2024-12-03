@@ -40,6 +40,7 @@
         <th>Image</th>
         <th>Cost</th>
         <th>id</th>
+        <th>Actions</th>
     </thead>
     <tbody>
         <tr *ngFor="let vehicle of vehicles , let i = index">
@@ -55,7 +56,8 @@
             <td>{{vehicle.cost}}</td>
             <td>{{vehicle.id}}</td>
             <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
-
+            <button routerLink="/dashboard/vehicle-details/{{vehicle.id}}" class="btn btn-primary">View</button>
+            <button routerLink="/dashboard/edit-vehicle/{{vehicle.id}}" class="btn btn-primary">Edit</button>
         </tr>
     </tbody>
 </table>

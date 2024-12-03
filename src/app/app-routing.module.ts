@@ -28,6 +28,9 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -36,6 +39,8 @@ const routes: Routes = [
     {path:'welcome', component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
     {path:'createvehicle', component:CreatevehicleComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreatevehicleComponent},
     {path:'eventregistration', component:EventregistrationComponent},
     {path:'empolyees', component:EmpolyeesComponent},
     {path:'mail', component:MailComponent},
@@ -45,6 +50,9 @@ const routes: Routes = [
     {path:'store', component:StoreComponent},
     {path:'hobbies', component:HobbiesComponent},
     {path:'student', component:StudentComponent},
+    {path:'student-details/:id', component:StudentDetailsComponent},
+    {path:'student-edit/:id', component:CreatestudentComponent},
+    {path:'createstudent',component:CreatestudentComponent},
     {path:'photos', component:PhotosComponent},
     {path:'movie', component:MovieComponent},
     {path:'directives',component:DirectivesComponent},

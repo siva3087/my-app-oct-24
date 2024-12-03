@@ -33,6 +33,10 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { StudentEditComponent } from './student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +68,11 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     PokemonComponent,
     CreatevehicleComponent,
     StudentComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    VehicleDetailsComponent,
+    CreatestudentComponent,
+    StudentDetailsComponent,
+    StudentEditComponent
   ],
   imports: [
     BrowserModule,

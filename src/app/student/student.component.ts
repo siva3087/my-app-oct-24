@@ -13,7 +13,8 @@ export class StudentComponent {
   term: string = "";
   column: string = "";
   order:string ="";
-  constructor(private _studentService: StudetService) {
+  student:any ={};
+  constructor(private _studentService:StudetService, ) {
     _studentService.getstudents().subscribe(
       (data: any) => {
         this.students = data;
@@ -43,6 +44,9 @@ export class StudentComponent {
         }
       )
     }
+  view(){}
+
+  edit(){}
   
 
 }

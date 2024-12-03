@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VechileService } from '../vechile.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-createvehicle',
@@ -8,7 +9,23 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./createvehicle.component.css']
 })
 export class CreatevehicleComponent {
-  constructor(private _vehicleservice:VechileService){}
+
+   id:string="";
+
+  constructor(private _vehicleservice:VechileService, private _activatedRoute:ActivatedRoute){
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.id=data.id;
+        // api Call
+        _vehicleservice.getVechile(data.id).subscribe(
+          (data:any)=>{
+            this.vehicleForm.patchValue(data);
+          }
+        )
+      }
+    )
+  }
 
   public vehicleForm:FormGroup = new FormGroup(
     {
@@ -23,7 +40,21 @@ export class CreatevehicleComponent {
     },
   )
   submit(){
-    console.log(this.vehicleForm);
+    if(this.id){
+      // edit
+      this._vehicleservice.updateVehicle(this.id,this.vehicleForm.value).subscribe(
+        (data:any)=>{
+          alert("update Successfully");
+        },
+        (err:any)=>{
+          alert("Updation Failed");
+        }
+      )
+    }
+    else{
+      // create
+    
+    // console.log(this.vehicleForm);
     this._vehicleservice.createVehicle(this.vehicleForm.value).subscribe(
       (data:any) =>{
         alert("vehicle created sucessfully");
@@ -34,4 +65,5 @@ export class CreatevehicleComponent {
     )
   }
 
+  }
 }
