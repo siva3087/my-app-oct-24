@@ -8,11 +8,13 @@
         <h3 class="dashboard-items" routerLink="application">Application</h3>
         <h3 class="dashboard-items" routerLink="student">Student</h3>
         <h3 class="dashboard-items" routerLink="createstudent">Create Student</h3>
+        <h3 class="dashboard-items" routerLink="marks">Marks</h3>
         <h3 class="dashboard-items" routerLink="databinding">Data Binding</h3>
         <h3 class="dashboard-items" routerLink="directives">Directives</h3>
         <h3 class="dashboard-items" routerLink="movie">Movie</h3>
         <h3 class="dashboard-items" routerLink="hobbies">Hobbies</h3>
         <h3 class="dashboard-items" routerLink="createvehicle">Create Vehicle</h3>
+        <h3 class="dashboard-items" routerLink="createuser">Create User</h3>
         <h3 class="dashboard-items" routerLink="eventregistration">Event</h3>
         <h3 class="dashboard-items" routerLink="empolyees">Staff</h3>
         <h3 class="dashboard-items" routerLink="mail">Mail</h3>
@@ -29,7 +31,7 @@
         <h3 class="dashboard-items" routerLink="circle">Circle</h3>
         <h3 class="dashboard-items" routerLink="bmi">BMI</h3>
 
-        <button class="Logout">Logout</button>
+        <button (click)="logout()" class="Logout">Logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>

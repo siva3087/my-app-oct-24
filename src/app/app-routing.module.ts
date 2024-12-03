@@ -31,10 +31,13 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { MarksComponent } from './marks/marks.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent,children:[
+  {path:'dashboard',canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'home', component:HomeComponent},
     {path:'welcome', component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
@@ -64,6 +67,8 @@ const routes: Routes = [
     {path:'application', component:ApplicationComponent},
     {path:'circle', component:CircleComponent},
     {path:'bmi', component:BMIComponent},
+    {path:'createuser', component:CreateuserComponent},
+    {path:'marks', component:MarksComponent},
     {path:'logout', component:LogoutComponent}
 
   ]},

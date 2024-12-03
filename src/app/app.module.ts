@@ -37,6 +37,9 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { MarksComponent } from './marks/marks.component';
 
 @NgModule({
   declarations: [
@@ -72,14 +75,17 @@ import { StudentEditComponent } from './student-edit/student-edit.component';
     VehicleDetailsComponent,
     CreatestudentComponent,
     StudentDetailsComponent,
-    StudentEditComponent
+    StudentEditComponent,
+    CreateuserComponent,
+    MarksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,75 @@
+<p>marks works!</p>
+<form [formGroup]="marksForm">
+    <label for="">Name:</label>
+    <input type="text" fromControlName="name">
+    <br>
+    <label for="">Class:</label>
+    <input type="number"fromControlName="class">
+    <br>
+    <label for="">Father Name:</label>
+    <input type="text" fromControlName="fathername">
+    <br>
+    <label for="">Phone:</label>
+    <input type="number" formControlName="phone">
+    <br>
+    <label for="">Email:</label>
+    <input type="email"fromControlName="email">
+    <br>
+    <label for="">DoB:</label>
+    <input type="date" fromControlName="dob">
+    <br>
+        <label for="">Type:</label>
+        <input type="radio" name="type" formControlName="type" value="dayscholor">
+        <label for="">DayScholor:</label>
+        <input type="radio" name="type" formControlName="type" value="rseidential" >
+        <label for="">Residential:</label>
+    <div *ngIf="marksForm.get('type')?.value =='dayscholor'">
+        <label for="">Bus Fee:</label>
+        <input type="number" formControlName="busFee">
+        <br>
+    </div>
+    <div *ngIf="marksForm.get('type')?.value == 'rseidential'">
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee">
+        <br>
+    </div>
+    <div fromGroupName="address">
+        <label for="">address line:</label>
+    <input type="text" fromControlName="addressline">
+    <br>
+    <label for="">City:</label>
+    <input type="text" fromControlName="city">
+    <br>
+    <label for="">State:</label>
+    <input type="text"fromControlName="state">
+    <br>
+    <label for="">Pincode:</label>
+    <input type="number" fromControlName="pin">
+    <br>
+    <button (click)="submit()" class="btn btn-warning">Submit</button>
+    <button (click)="add()" class="btn btn-primary">ADD</button>
+    <div FormGroupName="studentForm">
+        <div *ngFor="let student of marksFormArray.controls;let i= index">
+            <div>
+                <h2>class{{i+1}}</h2>
+                <label for="">Class:</label>
+                <input type="number" formControlName="class">
+                <br>
+                <label for="">year:</label>
+                <input type="year" formControlName="year">
+                <br>
+                <label for="">Percentage:</label>
+                <input type="number" formControlName="percentage">
+                <br>
+                <button (click)="delete(i)" class="btn btn-danger">Delete</button>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <button (click)="submit()" class="btn btn-warning">Submit</button>
+    <button (click)="add()" class="btn btn-primary">ADD</button> -->
+    </div>
+
+</form>
