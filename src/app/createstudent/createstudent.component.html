@@ -1,0 +1,42 @@
+<h1>{{id ? 'Edit Student':'Create Student'}}</h1>
+
+<form [formGroup]="studentForm">
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <br><label for="">Phone:</label>
+    <input type="number" formControlName="phone">
+    <br>
+    <br><label for="">City:</label>
+    <input type="text" formControlName="city">
+    <br>
+    <br><label for="">DoB:</label>
+    <input type="date" formControlName="dob">
+    <br>
+    <br>
+    <label for="">Profile Picture:</label>
+    <input type="text" formControlName="profile_picture">
+    <br>
+    <br>
+    <label for="">Email:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <br>
+    <label for="">School logo:</label>
+    <input type="text" formControlName="school_logo">
+    <br>
+    <br>
+    <label for="">School Name:</label>
+    <input type="text" formControlName="school_name">
+    <br>
+    <br>
+    <label for="">School pin:</label>
+    <input type="number" formControlName="school_pin">
+    <br>
+    <br>
+    
+
+    <button (click)="Add()" class="btn btn-primary">ADD</button>
+
+
+</form>

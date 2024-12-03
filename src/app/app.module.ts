@@ -33,6 +33,10 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { StudentComponent } from './student/student.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { StudentEditComponent } from './student-edit/student-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { MarksComponent } from './marks/marks.component';
@@ -68,6 +72,10 @@ import { MarksComponent } from './marks/marks.component';
     CreatevehicleComponent,
     StudentComponent,
     HobbiesComponent,
+    VehicleDetailsComponent,
+    CreatestudentComponent,
+    StudentDetailsComponent,
+    StudentEditComponent,
     CreateuserComponent,
     MarksComponent
   ],
