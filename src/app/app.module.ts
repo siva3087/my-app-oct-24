@@ -40,6 +40,7 @@ import { StudentEditComponent } from './student-edit/student-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { MarksComponent } from './marks/marks.component';
+import { CreatebankComponent } from './createbank/createbank.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { MarksComponent } from './marks/marks.component';
     StudentDetailsComponent,
     StudentEditComponent,
     CreateuserComponent,
-    MarksComponent
+    MarksComponent,
+    CreatebankComponent
   ],
   imports: [
     BrowserModule,

@@ -34,6 +34,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateuserComponent } from './createuser/createuser.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { MarksComponent } from './marks/marks.component';
+import { CreatebankComponent } from './createbank/createbank.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -64,6 +65,7 @@ const routes: Routes = [
     {path:'pokemon', component:PokemonComponent},
     {path:'vechile', component:VechileComponent},
     {path:'bank', component:BankComponent},
+    {path:'createbank',component:CreatebankComponent},
     {path:'application', component:ApplicationComponent},
     {path:'circle', component:CircleComponent},
     {path:'bmi', component:BMIComponent},
