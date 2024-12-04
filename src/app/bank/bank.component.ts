@@ -55,5 +55,18 @@ export class BankComponent {
       }
     )
   }
+  delete(id:string){
+    
+    this._bankService.deletedaccount(id).subscribe(
+      (data:any)=>{
+    alert('Deleted Successfully!!!');
+    location.reload();
+      },
+      (err:any)=>{
+        alert('internal server Error');
+      }
+    )
+
+  }
 
 }
