@@ -1,6 +1,6 @@
-<p>bank works!</p>
+<div class="search">
 <!-- search purpose -->
-<input type="text" [(ngModel)]="term" (keyup)="filter()">
+<input type="text" [(ngModel)]="term" (keyup)="filter()" class="searchbar" >
 <!--Sortig and asc & desc -->
 <select [(ngModel)] ="column">
     <option >account_name</option>
@@ -26,9 +26,10 @@
     <option >3</option>
 </select>
 <button (click)="pagination()">Page</button>
+</div>
 
 <table class="table table-dark table-striped table-bordered">
-    <thead border ="5" class=" table .table-striped ">
+    <thead border ="5" class="text-center" >
         <th>S.No</th>
         <th>Account Name</th>
         <th>Available Balance</th>

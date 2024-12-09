@@ -35,11 +35,10 @@ export class CreatestudentComponent {
     school_logo:new FormControl(),
     school_name:new FormControl(),
     school_pin:new FormControl(),
-    
-
   }
  )
  Add(){
+   // put(update) method
   if(this.id){
     this._studentService.updatestudent(this.id,this.studentForm.value).subscribe(
       (data:any)=>{
@@ -61,8 +60,6 @@ else{
     }
   
   )
-}
-  
+} 
  }
-
 }

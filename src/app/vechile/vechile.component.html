@@ -54,7 +54,7 @@
             <td>{{vehicle.color}}</td>
             <td>
                 <img src = "{{vehicle.image}}" alt="" width="100px"></td>
-            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.cost | price}}</td>
             <td>{{vehicle.id}}</td>
             <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
             <button routerLink="/dashboard/vehicle-details/{{vehicle.id}}" class="btn btn-primary">View</button>

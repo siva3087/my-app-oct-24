@@ -1,0 +1,15 @@
+.search{
+    height: 10%;
+    width: 100%;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    
+}
+.searchbar{
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

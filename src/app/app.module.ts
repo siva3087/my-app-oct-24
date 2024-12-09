@@ -41,6 +41,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { MarksComponent } from './marks/marks.component';
 import { CreatebankComponent } from './createbank/createbank.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { PricePipe } from './price.pipe';
+import { CapitalDirective } from './capital.directive';
+import { AboutusModule } from './aboutus/aboutus.module';
+
 
 @NgModule({
   declarations: [
@@ -79,7 +89,15 @@ import { CreatebankComponent } from './createbank/createbank.component';
     StudentEditComponent,
     CreateuserComponent,
     MarksComponent,
-    CreatebankComponent
+    CreatebankComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    SiblingsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    PricePipe,
+    CapitalDirective
   ],
   imports: [
     BrowserModule,
@@ -87,7 +105,8 @@ import { CreatebankComponent } from './createbank/createbank.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AboutusModule
   ],
   providers: [],
   bootstrap: [AppComponent]
