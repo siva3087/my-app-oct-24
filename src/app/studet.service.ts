@@ -18,6 +18,9 @@ export class StudetService {
   updatestudent(id:string,data:any):Observable<any>{
     return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id,data);
   }
+  deletestudent(id:string):Observable<any>{
+    return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id);
+  }
   getFilteredStudents(term:string):Observable<any>{
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/student?name="+term);
 

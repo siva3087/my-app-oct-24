@@ -10,7 +10,6 @@ export class CalculatorComponent {
   num1:number= 0;
   num2:number =0;
   result:number =0;
-
   Sum(){
     this.result = this.num1 + this.num2
   }
@@ -23,5 +22,4 @@ export class CalculatorComponent {
   Div(){
     this.result = this.num1 / this.num2
   }
-
 }

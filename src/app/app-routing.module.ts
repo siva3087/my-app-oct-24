@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -35,6 +35,10 @@ import { CreateuserComponent } from './createuser/createuser.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { MarksComponent } from './marks/marks.component';
 import { CreatebankComponent } from './createbank/createbank.component';
+import { ParentComponent } from './parent/parent.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { AboutCompanyComponent } from './aboutus/about-company/about-company.component';
+
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -71,7 +75,14 @@ const routes: Routes = [
     {path:'bmi', component:BMIComponent},
     {path:'createuser', component:CreateuserComponent},
     {path:'marks', component:MarksComponent},
-    {path:'logout', component:LogoutComponent}
+    {path:'logout', component:LogoutComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'siblings',component:SiblingsComponent},
+    {path:'about-company',component:AboutCompanyComponent},
+    // {
+    //   path:'payment'
+    //   loadingChildern:()=>import('./payment/payment.module').then(m=>m.PaymentModule)
+    // }
 
   ]},
   {path:'',component:LoginComponent},
@@ -79,7 +90,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

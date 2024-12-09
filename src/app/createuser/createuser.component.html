@@ -1,7 +1,7 @@
 <p>createuser works!</p>
 <form [formGroup]="userForm">
     <label for="">Name:</label>
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" appCapital>
     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
      <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
         <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Min 3 Charecters</p>
@@ -19,6 +19,13 @@
     <br>
     <label for="">Email:</label>
     <input type="text" formControlName="email">
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">email is Required</p>
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid email Format</p>
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['capgeminiMail']">onlycapgemini Mail Accepted</p>
+        <br>
+        </div>
+
     <br>
     <label for="">Phone:</label>
     <input type="text" formControlName="phone">
@@ -30,8 +37,7 @@
 
         <label for="">Pin:</label>
         <input type="number" formControlName="pin">
-        <br>
-
+        
     </div>
     <div>
         <label for="">Type:</label>

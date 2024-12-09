@@ -8,12 +8,12 @@ import { Subscriber } from 'rxjs';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent {
-
   students: any = [];
   term: string = "";
   column: string = "";
   order:string ="";
   student:any ={};
+  id:string ="";
   constructor(private _studentService:StudetService, ) {
     _studentService.getstudents().subscribe(
       (data: any) => {
@@ -44,11 +44,19 @@ export class StudentComponent {
         }
       )
     }
+    delete(id:string){
+      this._studentService.deletestudent(this.id).subscribe(
+        (data:any) =>{
+          alert("delete Successfully!!!");
+        },
+        (err:any) =>{
+          alert("internal server Error");
+        }
+      )    
+    }
   view(){}
 
   edit(){}
-  
-
 }
 
 

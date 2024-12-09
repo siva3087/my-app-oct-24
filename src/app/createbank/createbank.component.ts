@@ -11,8 +11,6 @@ export class CreatebankComponent {
 
   constructor(public _bankService: bankService) { }
 
-
-
   createbankForm: FormGroup = new FormGroup(
     {
       account_name: new FormControl(),
