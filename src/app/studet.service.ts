@@ -19,6 +19,7 @@ export class StudetService {
     return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id,data);
   }
   deletestudent(id:string):Observable<any>{
+    console.log(id)
     return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id);
   }
   getFilteredStudents(term:string):Observable<any>{

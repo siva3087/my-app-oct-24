@@ -45,7 +45,8 @@ export class StudentComponent {
       )
     }
     delete(id:string){
-      this._studentService.deletestudent(this.id).subscribe(
+      console.log(id)
+      this._studentService.deletestudent(id).subscribe(
         (data:any) =>{
           alert("delete Successfully!!!");
         },
